@@ -160,6 +160,10 @@ namespace GSW_Inventory
         /// <param name="e"></param>
         private void logoutButton_Click(object sender, EventArgs e)
         {
+            //removes information from list
+            inventory.Clear();
+
+            //changes screen
             Form f = this.FindForm();
             f.Controls.Remove(this);
             LoginScreen ls = new LoginScreen();
